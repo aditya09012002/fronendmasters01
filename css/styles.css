@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40% 60%;
+}
+.container .upper-box {
+  border-bottom-left-radius: 10% 20%;
+  border-bottom-right-radius: 10% 20%;
+  background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .upper-box .upper-box-heading {
+  width: 100%;
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+  margin-bottom: 0.5rem;
+}
+.container .upper-box .main-score {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .upper-box .main-score .main-score-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-image: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .upper-box .main-score .main-score-container h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.8rem;
+}
+.container .upper-box .main-score .main-score-container p {
+  color: hsl(241, 100%, 89%);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.container .upper-box .meta {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+.container .upper-box .meta .meta-heading {
+  padding: 0.5rem 0;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.container .upper-box .meta .meta-info {
+  max-width: 240px;
+  font-size: 0.875rem;
+  color: hsl(241, 100%, 89%);
+}
+.container .lower-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.container .lower-box .heading {
+  padding: 1rem 0;
+  font-family: "Hanken Grotesk";
+  font-weight: 800;
+  color: hsl(224, 30%, 27%);
+  font-size: 1rem;
+}
+.container .lower-box .summary-box {
+  padding: 0.8rem;
+  display: flex;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  font-weight: 700;
+  align-items: center;
+  width: 100%;
+}
+.container .lower-box .summary-box.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+.container .lower-box .summary-box.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+.container .lower-box .summary-box.verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.05);
+}
+.container .lower-box .summary-box.visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+.container .lower-box .summary-box .summary-box-sub {
+  display: flex;
+}
+.container .lower-box .summary-box .summary-box-sub .icon {
+  margin-right: 0.8rem;
+}
+.container .lower-box .summary-box .score {
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
+}
+.container .lower-box .summary-box .score .outOf {
+  color: hsl(241, 100%, 89%);
+  font-weight: 500;
+}
+.container .lower-box .btn-lg {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 12px 9px 1px 0px;
+  }
+  .parent-container .container {
+    width: 70%;
+    max-width: 600px;
+    max-height: 400px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    border-top-left-radius: 10% 10%;
+    border-top-right-radius: 10% 10%;
+    border-bottom-left-radius: 10% 10%;
+    border-bottom-right-radius: 10% 10%;
+  }
+  .parent-container .container .upper-box {
+    justify-content: center;
+    border-top-left-radius: 10% 10%;
+    border-top-right-radius: 10% 10%;
+    border-bottom-left-radius: 10% 10%;
+    border-bottom-right-radius: 10% 10%;
+  }
+  .parent-container .container .upper-box .upper-box-heading {
+    margin: none;
+  }
+  .parent-container .container .upper-box .main-score {
+    height: 40%;
+  }
+  .parent-container .container .upper-box .meta .meta-info {
+    max-width: 200px;
+    text-align: center;
+  }
+  .parent-container .container .lower-box .summary-box {
+    margin-bottom: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

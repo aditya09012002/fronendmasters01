@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+// Primary
+$Light-red: hsl(0, 100%, 67%);
+$backRed: hsla(0, 100%, 67%, 0.05);
+$Orangey-yellow: hsl(39, 100%, 56%);
+$backOrange: hsla(39, 100%, 56%, 0.05);
+$Green-teal: hsl(166, 100%, 37%);
+$backGreen: hsla(166, 100%, 37%, 0.05);
+$Cobalt-blue: hsl(234, 85%, 45%);
+$backCobalt: hsla(234, 85%, 45%, 0.05);
+
+// Neutral
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+// Gradients
+// background
+$Light-slate-blue: hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+// Circle
+$Violet-blue: hsla(256, 72%, 46%, 1);
+$Persian-blue: hsla(241, 72%, 46%, 0);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.container {
+  //   max-width: 375px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40% 60%;
+
+  .upper-box {
+    border-bottom-left-radius: 10% 20%;
+    border-bottom-right-radius: 10% 20%;
+    // outline: 1px solid red;
+    background-image: linear-gradient(
+      to top,
+      $Light-royal-blue,
+      $Light-slate-blue
+    );
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .upper-box-heading {
+      //   height: 20%;
+      width: 100%;
+      text-align: center;
+      color: $Light-lavender;
+      margin-bottom: 0.5rem;
+    }
+
+    .main-score {
+      height: 50%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .main-score-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background-image: linear-gradient($Violet-blue, $Persian-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          color: $White;
+          font-size: 2.8rem;
+        }
+
+        p {
+          color: $Light-lavender;
+          font-size: 0.8rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .meta {
+      //   height: 40%;
+      margin: 0 auto;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0.5rem 0;
+
+      .meta-heading {
+        padding: 0.5rem 0;
+        text-align: center;
+        color: $White;
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+      .meta-info {
+        max-width: 240px;
+        font-size: 0.875rem;
+        color: $Light-lavender;
+        // text-align: center;
+      }
+    }
+  }
+
+  .lower-box {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    width: 80%;
+    // height: 80%;
+    margin: 0 auto;
+    // padding: 1rem;
+
+    .heading {
+      padding: 1rem 0;
+      font-family: "Hanken Grotesk";
+      font-weight: 800;
+      color: $Dark-gray-blue;
+      font-size: 1rem;
+    }
+
+    .summary-box {
+      padding: 0.8rem;
+      display: flex;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      justify-content: space-between;
+      font-weight: 700;
+      align-items: center;
+      width: 100%;
+      // outline: 1px solid red;
+
+      &.reaction {
+        color: $Light-red;
+        background-color: $backRed;
+      }
+
+      &.memory {
+        color: $Orangey-yellow;
+        background-color: $backOrange;
+      }
+
+      &.verbal {
+        color: $Green-teal;
+        background-color: $backGreen;
+      }
+
+      &.visual {
+        color: $Cobalt-blue;
+        background-color: $backCobalt;
+      }
+
+      .summary-box-sub {
+        display: flex;
+
+        .icon {
+          margin-right: 0.8rem;
+        }
+      }
+
+      .score {
+        color: $Dark-gray-blue;
+        font-weight: 800;
+
+        .outOf {
+          color: $Light-lavender;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .btn-lg {
+      color: $White;
+      background-color: $Dark-gray-blue;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+  }
+}
+
+// @media
+@media screen and (min-width: 600px) {
+  .parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 12px 9px 1px 0px;
+    .container {
+      width: 70%;
+      max-width: 600px;
+      max-height: 400px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100%;
+      border-top-left-radius: 10% 10%;
+      border-top-right-radius: 10% 10%;
+      border-bottom-left-radius: 10% 10%;
+      border-bottom-right-radius: 10% 10%;
+
+      .upper-box {
+        justify-content: center;
+        .upper-box-heading {
+          margin: none;
+        }
+        .main-score {
+          height: 40%;
+        }
+
+        .meta {
+          .meta-info {
+            max-width: 200px;
+            text-align: center;
+          }
+        }
+
+        border-top-left-radius: 10% 10%;
+        border-top-right-radius: 10% 10%;
+        border-bottom-left-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+      }
+
+      .lower-box {
+        .summary-box {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
